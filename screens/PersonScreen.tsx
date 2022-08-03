@@ -7,8 +7,8 @@ import { Body } from "../components/UserScreen/Body/Body";
 export const PersonScreen = () => {
   return (
     <View>
-      <Header></Header>
-      <Body></Body>
+      <Header />
+      <Body />
     </View>
   );
 };
