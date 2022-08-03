@@ -1,12 +1,6 @@
 import React from "react";
-import { View, Text } from "react-native";
-
-import { styles } from "./styles";
+import { Index } from "./Blog/Index";
 
 export const Blog = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Blog</Text>
-    </View>
-  );
+  return <Index />;
 };

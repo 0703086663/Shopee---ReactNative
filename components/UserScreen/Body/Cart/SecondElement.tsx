@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, Alert, TouchableOpacity } from "react-native";
+import { View, Text } from "react-native";
+import { Badge } from "react-native-elements";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 import { styles } from "./styles";
@@ -21,12 +22,16 @@ export const SecondElement = () => {
         </View>
         <View style={styles.bigIconTop}>
           <Ionicons name={"cash-outline"} size={30} color={"tomato"} />
-          <Text style={styles.textUnderIcon}>Shopee Xu</Text>
+          <Text style={styles.textUnderIcon}>
+            Shopee Xu <Badge status={"error"} />
+          </Text>
           <Text style={styles.textBadgeNoti}>0 Xu</Text>
         </View>
         <View style={styles.bigIconTop}>
           <Ionicons name={"newspaper-outline"} size={30} color={"tomato"} />
-          <Text style={styles.textUnderIcon}> Kho Voucher</Text>
+          <Text style={styles.textUnderIcon}>
+             Kho Voucher <Badge status={"error"} />
+          </Text>
           <Text style={styles.textBadgeNoti}>31 Voucher</Text>
         </View>
       </View>
