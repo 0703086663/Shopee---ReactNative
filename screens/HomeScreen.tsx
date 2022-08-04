@@ -1,26 +1,21 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
-import { ButtonHref } from '../components/ButtonHref';
+import { Header } from "../components/HomeScreen/Header/Header";
+import { Body } from "../components/HomeScreen/Body/Body";
 
 export const HomeScreen = () => {
   return (
-      <View style={styles.container}>
-          <Text style={styles.h1}>Home Screen index</Text>
-          <ButtonHref route={'Category'} />
-      </View>
-  )
-}
+    <View style={styles.container}>
+      <Header />
+      <Body />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        textAlign: 'center',
-        paddingLeft: 18,
-        paddingRight: 18,
-        marginTop: 10
-    },
-    h1: {
-        textTransform: 'uppercase',
-        fontSize: 18,
-    }
-})
+  container: {
+    flexDirection: "column",
+    flex: 1,
+  },
+});

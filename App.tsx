@@ -43,16 +43,10 @@ const App = () => {
             // }
             if (route.name === "Home") {
               if ((iconName = focused)) {
-                return (
-                  <Ionicons name={"ios-thumbs-up"} size={size} color={color} />
-                );
+                return <Ionicons name={"ios-home"} size={size} color={color} />;
               }
               return (
-                <Ionicons
-                  name={"ios-thumbs-up-outline"}
-                  size={size}
-                  color={color}
-                />
+                <Ionicons name={"ios-home-outline"} size={size} color={color} />
               );
             } else if (route.name === "Feed") {
               if ((iconName = focused)) {
@@ -99,14 +93,14 @@ const App = () => {
         })}
       >
         <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: "Home", headerShown: false }}
+        />
+        <Tab.Screen
           name="User"
           component={PersonScreen}
           options={{ title: "Tôi", headerShown: false }}
-        />
-        <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: "Gợi ý hôm nay" }}
         />
         <Tab.Screen name="Feed" component={CategoryScreen} />
         <Tab.Screen name="Live" component={CategoryScreen} />
