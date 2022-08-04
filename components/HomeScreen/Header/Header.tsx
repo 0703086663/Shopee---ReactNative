@@ -34,28 +34,32 @@ export const Header = () => {
         </View>
         <View style={styles.topLeftActionContainer}>
           <TouchableOpacity activeOpacity={0.2} style={styles.topLeftAction}>
-            <Badge
-              value="21"
-              status="error"
-              containerStyle={styles.badgeIcon}
-            />
-            <Ionicons
-              name={"ios-cart-outline"}
-              color={"white"}
-              size={28}
-            ></Ionicons>
+            <View>
+              <Badge
+                value="21"
+                status="error"
+                containerStyle={styles.badgeIcon}
+              />
+              <Ionicons
+                name={"ios-cart-outline"}
+                color={"white"}
+                size={28}
+              ></Ionicons>
+            </View>
           </TouchableOpacity>
           <TouchableOpacity activeOpacity={0.2} style={styles.topLeftAction}>
-            <Badge
-              value="17"
-              status="error"
-              containerStyle={styles.badgeIcon}
-            />
-            <Ionicons
-              name={"ios-chatbubble-ellipses-outline"}
-              color={"white"}
-              size={28}
-            ></Ionicons>
+            <View>
+              <Badge
+                value="17"
+                status="error"
+                containerStyle={styles.badgeIcon}
+              />
+              <Ionicons
+                name={"ios-chatbubble-ellipses-outline"}
+                color={"white"}
+                size={28}
+              ></Ionicons>
+            </View>
           </TouchableOpacity>
         </View>
       </View>

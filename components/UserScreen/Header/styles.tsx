@@ -12,17 +12,26 @@ export const styles = StyleSheet.create({
     paddingTop: 50,
   },
   topLeftHeader: {
+    flex: 1 / 3,
+  },
+  topLeftHeaderItems: {
     backgroundColor: "white",
-    paddingTop: 7,
-    paddingBottom: 7,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 7,
     paddingLeft: 20,
+    marginRight: 10,
+    // paddingRight: -10,
     borderTopRightRadius: 50,
     borderBottomRightRadius: 50,
+  },
+  topCenterHeader: {
+    flex: 1 / 3,
   },
   tomatoText: { color: "tomato" },
   topRightHeader: {
     flexDirection: "row-reverse",
-    flex: 1,
+    flex: 1 / 3,
     paddingLeft: 10,
   },
   iconTopRight: { paddingLeft: 10 },
@@ -39,9 +48,10 @@ export const styles = StyleSheet.create({
   },
   bottomLeftHeader: {
     paddingLeft: 20,
-    paddingRight: 10,
+    flex: 1 / 6,
   },
   bottomRightHeader: {
+    flex: 5 / 6,
     flexDirection: "column",
   },
   bottomRightName: {
@@ -50,16 +60,20 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   bottomRightRoleBadge: {
+    // justifyContent: "space-between",
+    // flexDirection: "row",
+    // flex: 1 / 4,
+    // backgroundColor: "white",
+    // paddingVertical: 1,
+    // paddingHorizontal: 10,
+    // borderRadius: 50,
+    paddingLeft: 5,
     backgroundColor: "white",
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 2,
-    paddingBottom: 2,
-    borderRadius: 50,
     flexDirection: "row",
-    maxWidth: "50%",
-    marginTop: 2,
-    marginBottom: 2,
+    alignItems: "center",
+    justifyContent: "space-between",
+    flex: 1 / 4,
+    borderRadius: 50,
   },
   bottomRightRole: {
     color: "tomato",
@@ -67,10 +81,10 @@ export const styles = StyleSheet.create({
   },
   bottomRightFollow: {
     color: "white",
-    fontSize: 12,
+    fontSize: 10,
   },
   bottomRightFollowNumber: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "bold",
   },
 });

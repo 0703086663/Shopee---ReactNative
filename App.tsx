@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { HomeScreen } from "./screens/HomeScreen";
 import { CategoryScreen } from "./screens/CategoryScreen";
 import { DetailScreen } from "./screens/DetailScreen";
-import { PersonScreen } from "./screens/PersonScreen";
+import { UserScreen } from "./screens/UserScreen";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 
@@ -93,14 +93,14 @@ const App = () => {
         })}
       >
         <Tab.Screen
+          name="User"
+          component={UserScreen}
+          options={{ title: "Tôi", headerShown: false }}
+        />
+        <Tab.Screen
           name="Home"
           component={HomeScreen}
           options={{ title: "Home", headerShown: false }}
-        />
-        <Tab.Screen
-          name="User"
-          component={PersonScreen}
-          options={{ title: "Tôi", headerShown: false }}
         />
         <Tab.Screen name="Feed" component={CategoryScreen} />
         <Tab.Screen name="Live" component={CategoryScreen} />
