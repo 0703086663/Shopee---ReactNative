@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     flexDirection: "column",
     flex: 2,
-    backgroundColor: "rgb(255, 99, 71)",
+    backgroundColor: "#f19a6f",
   },
   searchContainer: {
     flex: 1 / 5,
