@@ -93,14 +93,14 @@ const App = () => {
         })}
       >
         <Tab.Screen
-          name="User"
-          component={UserScreen}
-          options={{ title: "Tôi", headerShown: false }}
-        />
-        <Tab.Screen
           name="Home"
           component={HomeScreen}
           options={{ title: "Home", headerShown: false }}
+        />
+        <Tab.Screen
+          name="User"
+          component={UserScreen}
+          options={{ title: "Tôi", headerShown: false }}
         />
         <Tab.Screen name="Feed" component={CategoryScreen} />
         <Tab.Screen name="Live" component={CategoryScreen} />
