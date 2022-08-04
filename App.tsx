@@ -8,6 +8,7 @@ import { HomeScreen } from "./screens/HomeScreen";
 import { CategoryScreen } from "./screens/CategoryScreen";
 import { DetailScreen } from "./screens/DetailScreen";
 import { UserScreen } from "./screens/UserScreen";
+import { NotificationScreen } from "./screens/NotificationScreen";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 
@@ -106,8 +107,8 @@ const App = () => {
         <Tab.Screen name="Live" component={CategoryScreen} />
         <Tab.Screen
           name="Notification"
-          component={CategoryScreen}
-          options={{ title: "Thông báo" }}
+          component={NotificationScreen}
+          options={{ title: "Thông báo", headerShown: false }}
         />
       </Tab.Navigator>
     </NavigationContainer>

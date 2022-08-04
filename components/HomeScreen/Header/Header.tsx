@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  TextInput,
-  Text,
-  Image,
-  TouchableOpacity,
-} from "react-native";
-import { Badge } from "react-native-elements";
+import { StyleSheet, View, TextInput, Image } from "react-native";
 import test from "../../../assets/code.jpg";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
@@ -35,7 +27,7 @@ export const Header = () => {
           </View>
         </View>
         <View style={styles.topLeftActionContainer}>
-          <HeaderIcons />
+          <HeaderIcons iconColor={"white"} />
         </View>
       </View>
       <View style={styles.carouselContainer}>

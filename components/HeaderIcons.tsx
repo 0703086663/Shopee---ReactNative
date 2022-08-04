@@ -3,7 +3,8 @@ import { View, StyleSheet } from "react-native";
 import { Badge } from "react-native-elements";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-export const HeaderIcons = () => {
+export const HeaderIcons = (props: any) => {
+  const { iconColor } = props;
   return (
     <View style={styles.row}>
       <View>
@@ -12,7 +13,7 @@ export const HeaderIcons = () => {
           style={styles.iconTopRight}
           name={"cart-outline"}
           size={28}
-          color={"white"}
+          color={iconColor}
         />
       </View>
       <View>
@@ -21,7 +22,7 @@ export const HeaderIcons = () => {
           style={styles.iconTopRight}
           name={"md-chatbubbles-outline"}
           size={28}
-          color={"white"}
+          color={iconColor}
         />
       </View>
     </View>
