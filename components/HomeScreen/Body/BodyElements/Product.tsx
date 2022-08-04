@@ -1,5 +1,6 @@
 import { StyleSheet, View, Image, Text } from "react-native";
 import code from "../../../../assets/code.jpg";
+import { formatNumber } from "../../../../utils/format";
 
 export const Product = (props: any) => {
   const { product } = props;
@@ -19,7 +20,9 @@ export const Product = (props: any) => {
         </View>
         <View style={styles.priceContainer}>
           <Text style={styles.price}>đ{product.price}</Text>
-          <Text style={styles.buyCount}>Đã bán {product.buyCount}</Text>
+          <Text style={styles.buyCount}>
+            Đã bán {formatNumber(product.buyCount)}
+          </Text>
         </View>
       </View>
     </View>
