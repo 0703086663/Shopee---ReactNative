@@ -18,7 +18,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <FontAwesome name="bolt" size={24} color="#ffb640" />
+                <FontAwesome name="bolt" size={32} color="#ffb640" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Khung Giờ Săn Sale</Text>
@@ -30,7 +30,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="ticket-percent-outline"
-                  size={24}
+                  size={32}
                   color="black"
                 />
               </View>
@@ -46,7 +46,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="truck"
-                  size={24}
+                  size={32}
                   color="#11823b"
                 />
               </View>
@@ -58,7 +58,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Ionicons name="flame" size={24} color="#CF352E" />
+                <Ionicons name="flame" size={32} color="#CF352E" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Bắt Trend - Giá Sốc</Text>
@@ -68,7 +68,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Entypo name="price-tag" size={24} color="#ffb640" />
+                <Entypo name="price-tag" size={32} color="#ffb640" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Hàng Hiệu Giá Tốt</Text>
@@ -78,7 +78,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Entypo name="globe" size={24} color="#11823b" />
+                <Entypo name="globe" size={32} color="#11823b" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>
@@ -92,7 +92,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <FontAwesome name="bolt" size={24} color="#ffb640" />
+                <FontAwesome name="bolt" size={32} color="#ffb640" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Khung Giờ Săn Sale</Text>
@@ -104,7 +104,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="ticket-percent-outline"
-                  size={24}
+                  size={32}
                   color="black"
                 />
               </View>
@@ -120,7 +120,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="truck"
-                  size={24}
+                  size={32}
                   color="#11823b"
                 />
               </View>
@@ -174,16 +174,19 @@ const styles = StyleSheet.create({
   },
   tabScroll: {
     flexDirection: "column",
+    flexGow: 1,
   },
   tabRow: {
+    // height: 150,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
   },
   tabItemContainer: {
     flex: 1,
-    width: "80%",
-    height: "80%",
+    paddingTop: 10,
+    width: 100,
+    height: 100,
   },
   tabItem: {
     flex: 1,
@@ -200,11 +203,12 @@ const styles = StyleSheet.create({
   },
   tabItemTitleContainer: {
     flex: 1,
-    aspectRatio: 1,
+    aspectRatio: 2,
   },
   tabItemTitle: {
     textAlign: "center",
-    fontSize: 8,
+    fontSize: 10,
     color: "white",
+    paddingTop: 5,
   },
 });
