@@ -11,6 +11,8 @@ import { Badge } from "react-native-elements";
 import test from "../../../assets/code.jpg";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
+import { HeaderIcons } from "../../HeaderIcons";
+
 export const Header = () => {
   return (
     <View style={styles.container}>
@@ -33,34 +35,7 @@ export const Header = () => {
           </View>
         </View>
         <View style={styles.topLeftActionContainer}>
-          <TouchableOpacity activeOpacity={0.2} style={styles.topLeftAction}>
-            <View>
-              <Badge
-                value="21"
-                status="error"
-                containerStyle={styles.badgeIcon}
-              />
-              <Ionicons
-                name={"ios-cart-outline"}
-                color={"white"}
-                size={28}
-              ></Ionicons>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.2} style={styles.topLeftAction}>
-            <View>
-              <Badge
-                value="17"
-                status="error"
-                containerStyle={styles.badgeIcon}
-              />
-              <Ionicons
-                name={"ios-chatbubble-ellipses-outline"}
-                color={"white"}
-                size={28}
-              ></Ionicons>
-            </View>
-          </TouchableOpacity>
+          <HeaderIcons />
         </View>
       </View>
       <View style={styles.carouselContainer}>
@@ -85,7 +60,7 @@ const styles = StyleSheet.create({
   },
   searchBar: {
     flexDirection: "row",
-    flex: 3 / 4,
+    flex: 4 / 5,
     backgroundColor: "white",
     borderRadius: 5,
   },
@@ -96,7 +71,7 @@ const styles = StyleSheet.create({
   },
   topLeftActionContainer: {
     flexDirection: "row",
-    flex: 1 / 4,
+    flex: 1 / 5,
     alignItems: "center",
   },
   topLeftAction: {

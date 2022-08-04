@@ -7,19 +7,19 @@ export const HeaderIcons = () => {
   return (
     <View style={styles.row}>
       <View>
-        <Badge value="53" status="error" containerStyle={styles.badgeIcon} />
+        <Badge value="6" status="error" containerStyle={styles.badgeIcon} />
         <Ionicons
           style={styles.iconTopRight}
-          name={"md-chatbubbles-outline"}
+          name={"cart-outline"}
           size={28}
           color={"white"}
         />
       </View>
       <View>
-        <Badge value="6" status="error" containerStyle={styles.badgeIcon} />
+        <Badge value="53" status="error" containerStyle={styles.badgeIcon} />
         <Ionicons
           style={styles.iconTopRight}
-          name={"cart-outline"}
+          name={"md-chatbubbles-outline"}
           size={28}
           color={"white"}
         />
