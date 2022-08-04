@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
   tabItemContainer: {
     flex: 1,
     paddingTop: 10,
-    width: 100,
+    width: 90,
     height: 100,
   },
   tabItem: {

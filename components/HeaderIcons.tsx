@@ -12,8 +12,7 @@ export const HeaderIcons = (props: any) => {
         <Ionicons
           style={styles.iconTopRight}
           name={"cart-outline"}
-          size={28}
-          color={iconColor}
+          size={28} color={iconColor}
         />
       </View>
       <View>
