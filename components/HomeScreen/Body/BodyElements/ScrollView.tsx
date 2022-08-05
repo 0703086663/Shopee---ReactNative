@@ -47,7 +47,7 @@ export const ScrollViewElements = () => {
                 <MaterialCommunityIcons
                   name="truck"
                   size={32}
-                  color="#11823b"
+                  color="#10bc9c"
                 />
               </View>
               <View style={styles.tabItemTitleContainer}>
@@ -78,7 +78,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Entypo name="globe" size={32} color="#11823b" />
+                <Entypo name="globe" size={32} color="#10bc9c" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>
@@ -121,7 +121,7 @@ export const ScrollViewElements = () => {
                 <MaterialCommunityIcons
                   name="truck"
                   size={32}
-                  color="#11823b"
+                  color="#10bc9c"
                 />
               </View>
               <View style={styles.tabItemTitleContainer}>
@@ -152,7 +152,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Entypo name="globe" size={24} color="#11823b" />
+                <Entypo name="globe" size={24} color="#10bc9c" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>
