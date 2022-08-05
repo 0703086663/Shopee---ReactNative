@@ -20,12 +20,12 @@ const NotificationStackNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Notification"
+        name="NotificationStack"
         options={{ headerShown: false }}
         component={NotificationScreen}
       />
       <Stack.Screen
-        name="Cart"
+        name="CartStack"
         options={{ headerShown: false }}
         component={CartScreen}
       />
