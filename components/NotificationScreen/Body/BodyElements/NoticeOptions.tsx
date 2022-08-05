@@ -18,12 +18,12 @@ export const NoticeOptions = () => {
           <Foundation name="pricetag-multiple" size={26} color="#ffb640" />
         </View>
         <View style={styles.contentWrapper}>
-          <View style={styles.contentTitleWrapper}>
-            <Text style={styles.contentTitle}>TITLE 01</Text>
-          </View>
-          <View style={styles.contentTextWrapper}>
-            <Text style={styles.contentText}>Dit me may test</Text>
-          </View>
+          <Text numberOfLines={1} style={styles.contentTitle}>
+            TITLE 01
+          </Text>
+          <Text numberOfLines={1} style={styles.mainContent}>
+            Dit me may test
+          </Text>
         </View>
         <View style={styles.arrowWrapper}>
           <View style={styles.redNumberWrapper}>
@@ -44,12 +44,12 @@ export const NoticeOptions = () => {
           <Foundation name="pricetag-multiple" size={26} color="#ffb640" />
         </View>
         <View style={styles.contentWrapper}>
-          <View style={styles.contentTitleWrapper}>
-            <Text style={styles.contentTitle}>TITLE 01</Text>
-          </View>
-          <View style={styles.contentTextWrapper}>
-            <Text style={styles.contentText}>Dit me may test</Text>
-          </View>
+          <Text numberOfLines={1} style={styles.contentTitle}>
+            TITLE 01
+          </Text>
+          <Text numberOfLines={1} style={styles.mainContent}>
+            Dit me may test
+          </Text>
         </View>
         <View style={styles.arrowWrapper}>
           <View style={styles.redNumberWrapper}>
@@ -70,12 +70,12 @@ export const NoticeOptions = () => {
           <Foundation name="pricetag-multiple" size={26} color="#ffb640" />
         </View>
         <View style={styles.contentWrapper}>
-          <View style={styles.contentTitleWrapper}>
-            <Text style={styles.contentTitle}>TITLE 01</Text>
-          </View>
-          <View style={styles.contentTextWrapper}>
-            <Text style={styles.contentText}>Dit me may test</Text>
-          </View>
+          <Text numberOfLines={1} style={styles.contentTitle}>
+            TITLE 01
+          </Text>
+          <Text numberOfLines={1} style={styles.mainContent}>
+            Dit me may test
+          </Text>
         </View>
         <View style={styles.arrowWrapper}>
           <View style={styles.redNumberWrapper}>
@@ -96,12 +96,12 @@ export const NoticeOptions = () => {
           <Foundation name="pricetag-multiple" size={26} color="#ffb640" />
         </View>
         <View style={styles.contentWrapper}>
-          <View style={styles.contentTitleWrapper}>
-            <Text style={styles.contentTitle}>TITLE 01</Text>
-          </View>
-          <View style={styles.contentTextWrapper}>
-            <Text style={styles.contentText}>Dit me may test</Text>
-          </View>
+          <Text numberOfLines={1} style={styles.contentTitle}>
+            TITLE 01
+          </Text>
+          <Text numberOfLines={1} style={styles.mainContent}>
+            Dit me may test
+          </Text>
         </View>
         <View style={styles.arrowWrapper}>
           <View style={styles.redNumberWrapper}>
@@ -124,12 +124,10 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "column",
     paddingVertical: 5,
-    flex: 1,
   },
   optionRowWrapper: {
-    flex: 1,
     flexDirection: "row",
-    padding: 5,
+    padding: 10,
     backgroundColor: "white",
     borderBottomColor: "lightgrey",
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -144,34 +142,31 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "column",
   },
-  content: {},
+  contentTitle: {
+    justifyContent: "flex-start",
+    fontWeight: "600",
+    fontSize: 16,
+  },
+  mainContent: {
+    justifyContent: "flex-end",
+    color: "grey",
+  },
   arrowWrapper: {
     flex: 1 / 8,
     flexDirection: "row",
     alignItems: "center",
   },
   redNumberWrapper: {
-    flex: 1,
-    // justifyContent: "center",
     alignItems: "center",
+    borderRadius: 10,
+    backgroundColor: "tomato",
   },
   redNumber: {
-    backgroundColor: "tomato",
     color: "white",
-    borderRadius: 10,
+
     justifyContent: "center",
     padding: 2,
     fontSize: 12,
   },
   arrow: { flex: 1, justifyContent: "center" },
-  contentTitleWrapper: {
-    flex: 1,
-  },
-  contentTitle: {
-    fontWeight: "600",
-  },
-  contentTextWrapper: {
-    flex: 1,
-  },
-  contentText: {},
 });

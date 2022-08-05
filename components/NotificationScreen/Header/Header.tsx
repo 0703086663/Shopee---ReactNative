@@ -13,34 +13,6 @@ export const Header = () => {
           <HeaderIcons iconColor={"tomato"} />
         </View>
       </View>
-
-      {/* <View style={styles.bottomHeader}>
-        <View style={styles.bottomLeftHeader}>
-          <Image style={styles.avatar} source={Avatar} />
-        </View>
-        <View style={styles.bottomRightHeader}>
-          <Text style={styles.bottomRightName}>zyxell</Text>
-          <View style={{ flexDirection: "row" }}>
-            <View style={styles.bottomRightRoleBadge}>
-              <Text style={[styles.tomatoText, { fontSize: 11 }]}>
-                Thành Viên
-              </Text>
-              <Ionicons name={"arrow-forward"} size={16} color={"tomato"} />
-            </View>
-          </View>
-          <View style={[, { flexDirection: "row" }]}>
-            <Text style={styles.bottomRightFollow}>
-              Người theo dõi{" "}
-              <Text style={styles.bottomRightFollowNumber}>2</Text>
-            </Text>
-            <Text> | </Text>
-            <Text style={styles.bottomRightFollow}>
-              Đang theo dõi{" "}
-              <Text style={styles.bottomRightFollowNumber}>8</Text>
-            </Text>
-          </View>
-        </View>
-      </View> */}
     </View>
   );
 };
@@ -71,6 +43,8 @@ const styles = StyleSheet.create({
   },
   topCenterHeaderTitle: {
     fontSize: 20,
+    fontWeight: "400",
+    paddingBottom: 5,
   },
   topRightHeader: {
     flexDirection: "row-reverse",

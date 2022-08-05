@@ -6,7 +6,7 @@ import { Body } from "../components/NotificationScreen/Body/Body";
 
 export const NotificationScreen = () => {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Header />
       <Body />
     </View>
