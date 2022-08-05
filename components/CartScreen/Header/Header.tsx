@@ -3,9 +3,9 @@ import { HeaderGlobal } from "../../HeaderGlobal";
 export const Header = () => {
   return (
     <HeaderGlobal
-      headerTitle={"Thông báo"}
+      headerTitle={"Giỏ hàng"}
       iconColor={"tomato"}
-      haveIcon={false}
+      haveIcon={true}
     />
   );
 };

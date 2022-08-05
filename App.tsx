@@ -9,11 +9,29 @@ import { CategoryScreen } from "./screens/CategoryScreen";
 import { DetailScreen } from "./screens/DetailScreen";
 import { UserScreen } from "./screens/UserScreen";
 import { NotificationScreen } from "./screens/NotificationScreen";
+import { CartScreen } from "./screens/CartScreen";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
+const NotificationStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Notification"
+        options={{ headerShown: false }}
+        component={NotificationScreen}
+      />
+      <Stack.Screen
+        name="Cart"
+        options={{ headerShown: false }}
+        component={CartScreen}
+      />
+    </Stack.Navigator>
+  );
+};
 
 const App = () => {
   return (
@@ -103,11 +121,11 @@ const App = () => {
           component={UserScreen}
           options={{ title: "Tôi", headerShown: false }}
         />
-        <Tab.Screen name="Feed" component={CategoryScreen} />
+        <Tab.Screen name="Feed" component={DetailScreen} />
         <Tab.Screen name="Live" component={CategoryScreen} />
         <Tab.Screen
           name="Notification"
-          component={NotificationScreen}
+          component={NotificationStackNavigator}
           options={{ title: "Thông báo", headerShown: false }}
         />
       </Tab.Navigator>
