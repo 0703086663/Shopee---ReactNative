@@ -4,11 +4,31 @@ import {
   Ionicons,
   Entypo,
   MaterialCommunityIcons,
+  Foundation,
 } from "@expo/vector-icons";
 
 export const ScrollViewElements = () => {
   return (
     <View style={styles.tabContainer}>
+      <View style={styles.wrapperTop}>
+        <View style={styles.wrapperTopLeft}>
+          <MaterialCommunityIcons name="line-scan" size={22} color="grey" />
+        </View>
+        <View style={styles.wrapperTopCenter}>
+          <View style={styles.centerRow}>
+            <Ionicons name="wallet-outline" size={16} color="tomato" />
+            <Text style={styles.wrapperTopText}>Ví ShopeePay</Text>
+          </View>
+          <Text style={styles.wrapperTopSmallText}>Voucher giảm đến 90K</Text>
+        </View>
+        <View style={styles.wrapperTopCenter}>
+          <View style={styles.centerRow}>
+            <Foundation name="bitcoin-circle" size={16} color="tomato" />
+            <Text style={styles.wrapperTopText}>0</Text>
+          </View>
+          <Text style={styles.wrapperTopSmallText}>Voucher giảm đến 90K</Text>
+        </View>
+      </View>
       <ScrollView
         horizontal={true}
         contentContainerStyle={styles.tabScroll}
@@ -18,7 +38,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <FontAwesome name="bolt" size={32} color="#ffb640" />
+                <FontAwesome name="bolt" size={26} color="#ffb640" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Khung Giờ Săn Sale</Text>
@@ -30,7 +50,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="ticket-percent-outline"
-                  size={32}
+                  size={26}
                   color="black"
                 />
               </View>
@@ -46,7 +66,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="truck"
-                  size={32}
+                  size={26}
                   color="#10bc9c"
                 />
               </View>
@@ -58,7 +78,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Ionicons name="flame" size={32} color="#CF352E" />
+                <Ionicons name="flame" size={26} color="#CF352E" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Bắt Trend - Giá Sốc</Text>
@@ -68,7 +88,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Entypo name="price-tag" size={32} color="#ffb640" />
+                <Entypo name="price-tag" size={26} color="#ffb640" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Hàng Hiệu Giá Tốt</Text>
@@ -78,7 +98,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <Entypo name="globe" size={32} color="#10bc9c" />
+                <Entypo name="globe" size={26} color="#10bc9c" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>
@@ -92,7 +112,7 @@ export const ScrollViewElements = () => {
           <View style={styles.tabItemContainer}>
             <View style={styles.tabItem}>
               <View style={styles.tabItemIconContainer}>
-                <FontAwesome name="bolt" size={32} color="#ffb640" />
+                <FontAwesome name="bolt" size={26} color="#ffb640" />
               </View>
               <View style={styles.tabItemTitleContainer}>
                 <Text style={styles.tabItemTitle}>Khung Giờ Săn Sale</Text>
@@ -104,7 +124,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="ticket-percent-outline"
-                  size={32}
+                  size={26}
                   color="black"
                 />
               </View>
@@ -120,7 +140,7 @@ export const ScrollViewElements = () => {
               <View style={styles.tabItemIconContainer}>
                 <MaterialCommunityIcons
                   name="truck"
-                  size={32}
+                  size={26}
                   color="#10bc9c"
                 />
               </View>
@@ -169,9 +189,39 @@ export const ScrollViewElements = () => {
 
 const styles = StyleSheet.create({
   tabContainer: {
-    paddingHorizontal: 5,
     backgroundColor: "#f19a6f",
   },
+  wrapperTop: {
+    flexDirection: "row",
+    marginHorizontal: 10,
+    paddingVertical: 15,
+    backgroundColor: "white",
+    borderRadius: 3,
+    top: -10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  hr: {},
+  wrapperTopLeft: { flex: 1, justifyContent: "center", alignItems: "center" },
+  centerRow: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  wrapperTopCenter: {
+    flex: 4,
+    borderLeftWidth: 1,
+    borderColor: "lightgrey",
+    paddingLeft: 10,
+  },
+  wrapperTopText: { paddingLeft: 5 },
+  wrapperTopSmallText: { color: "grey", fontSize: 10 },
   tabScroll: {
     flexDirection: "column",
     flexGow: 1,
@@ -185,8 +235,8 @@ const styles = StyleSheet.create({
   tabItemContainer: {
     flex: 1,
     paddingTop: 10,
-    width: 90,
-    height: 100,
+    width: 80,
+    height: 80,
   },
   tabItem: {
     flex: 1,

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import { Header } from "../components/HomeScreen/Header/Header";
 import { Body } from "../components/HomeScreen/Body/Body";
