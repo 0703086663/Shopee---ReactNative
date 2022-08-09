@@ -36,8 +36,17 @@ const styles = StyleSheet.create({
     backgroundColor: "tomato",
     alignSelf: "flex-start",
     position: "absolute",
+    borderTopRightRadius: 2,
+    borderBottomRightRadius: 2,
+    // shadowColor: "tomato",
+    // shadowOpacity: 1,
   },
-  topLeftBadgeText: { fontSize: 10, color: "white", padding: 1 },
+  topLeftBadgeText: {
+    fontSize: 10,
+    color: "white",
+    padding: 1,
+    paddingHorizontal: 2,
+  },
   productContainer: {
     backgroundColor: "white",
     flexDirection: "column",

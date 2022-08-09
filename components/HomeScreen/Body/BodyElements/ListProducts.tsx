@@ -177,6 +177,9 @@ export const ListProductsElement = () => {
 
   return (
     <View style={styles.productsListContainer}>
+      <View style={styles.titleContainer}>
+        <Text style={styles.titleText}>GỢI Ý HÔM NAY</Text>
+      </View>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={styles.row}>
           <TouchableOpacity
@@ -446,13 +449,23 @@ export const ListProductsElement = () => {
 const styles = StyleSheet.create({
   productsListContainer: {
     flex: 1,
+    marginTop: 10,
+  },
+  titleContainer: {
+    backgroundColor: "white",
+    padding: 10,
+    paddingVertical: 15,
+  },
+  titleText: {
+    color: "tomato",
+    textTransform: "uppercase",
+    fontWeight: "500",
   },
   flatList: {
     alignItems: "center",
   },
   row: {
     flexDirection: "row",
-    paddingBottom: 30,
     paddingHorizontal: 5,
   },
   rowItemWrapper: {
