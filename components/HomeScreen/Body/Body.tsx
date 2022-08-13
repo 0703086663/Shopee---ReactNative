@@ -20,7 +20,7 @@ export const Body = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 4,
+    flex: 1,
   },
   carousel: { height: 220 },
 });

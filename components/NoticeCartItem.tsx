@@ -5,7 +5,12 @@ import { AntDesign } from "@expo/vector-icons";
 export const NoticeCartItem = (props: any) => {
   const { cartUpdate } = props;
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.readContainer,
+        cartUpdate.isRead ? styles.readContainer : styles.unReadContainer,
+      ]}
+    >
       <View style={styles.imageWrapper}>
         <Image style={styles.image} source={cartUpdate.image}></Image>
       </View>
@@ -30,11 +35,19 @@ export const NoticeCartItem = (props: any) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  readContainer: {
     flexDirection: "row",
     paddingVertical: 5,
     paddingHorizontal: 10,
     backgroundColor: "white",
+    borderBottomColor: "lightgrey",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  unReadContainer: {
+    flexDirection: "row",
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    backgroundColor: "#fce8e3",
     borderBottomColor: "lightgrey",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },

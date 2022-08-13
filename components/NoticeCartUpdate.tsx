@@ -1,22 +1,26 @@
 import { useState } from "react";
 import { View, StyleSheet, Text, ScrollView, FlatList } from "react-native";
-import home from "../../../../assets/home.png";
+import home from "../assets/home.png";
 import { NoticeCartItem } from "./NoticeCartItem";
 
-export const NoticeCartListHeader = () => {
+export const NoticeCartListHeader = (props: any) => {
+  const { title, badge } = props;
   return (
     <View style={styles.headerWrapper}>
       <View style={styles.headerFirstTextWrapper}>
-        <Text style={styles.headerFirstText}>Cập nhật đơn hàng</Text>
+        <Text style={styles.headerFirstText}>{title}</Text>
       </View>
-      <View style={styles.headerSecondTextWrapper}>
-        <Text style={styles.headerSecondText}>Đọc tất cả (5)</Text>
-      </View>
+      {badge > 0 ? (
+        <View style={styles.headerSecondTextWrapper}>
+          <Text style={styles.headerSecondText}>Đọc tất cả ({badge})</Text>
+        </View>
+      ) : null}
     </View>
   );
 };
 
-export const NoticeCartUpdate = () => {
+export const NoticeCartUpdate = (props: any) => {
+  const { title, badge } = props;
   const [cartUpdate, setCartUpdate] = useState([
     {
       id: 1,
@@ -25,6 +29,7 @@ export const NoticeCartUpdate = () => {
         "Đơn hàng 01 đã hoàn thành. Bạn hãy đánh giá sản phẩm trước ngày 10-08-2022 để nhận 200 xu và giúp người dùng khác hiểu hơn về sản phẩm nhé!",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: true,
     },
     {
       id: 2,
@@ -32,6 +37,7 @@ export const NoticeCartUpdate = () => {
       content: "Đơn hàng 02 đã hoàn thành.",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: false,
     },
     {
       id: 3,
@@ -39,6 +45,7 @@ export const NoticeCartUpdate = () => {
       content: "Đơn hàng 03 đã hoàn thành.",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: false,
     },
     {
       id: 4,
@@ -47,6 +54,7 @@ export const NoticeCartUpdate = () => {
         "Đơn hàng 04 đã hoàn thành. Bạn hãy đánh giá sản phẩm trước ngày 10-08-2022 để nhận 200 xu và giúp người dùng khác hiểu hơn về sản phẩm nhé!",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: true,
     },
     {
       id: 5,
@@ -55,6 +63,7 @@ export const NoticeCartUpdate = () => {
         "Đơn hàng 05 đã hoàn thành. Bạn hãy đánh giá sản phẩm trước ngày 10-08-2022 để nhận 200 xu và giúp người dùng khác hiểu hơn về sản phẩm nhé!",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: true,
     },
     {
       id: 6,
@@ -63,6 +72,7 @@ export const NoticeCartUpdate = () => {
         "Đơn hàng 06 đã hoàn thành. Bạn hãy đánh giá sản phẩm trước ngày 10-08-2022 để nhận 200 xu và giúp người dùng khác hiểu hơn về sản phẩm nhé!",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: false,
     },
     {
       id: 7,
@@ -70,6 +80,7 @@ export const NoticeCartUpdate = () => {
       content: "Đơn hàng 07 đã hoàn thành.",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: true,
     },
     {
       id: 8,
@@ -77,6 +88,7 @@ export const NoticeCartUpdate = () => {
       content: "Đơn hàng 08 đã hoàn thành.",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: false,
     },
     {
       id: 9,
@@ -85,6 +97,7 @@ export const NoticeCartUpdate = () => {
         "Đơn hàng 09 đã hoàn thành. Bạn hãy đánh giá sản phẩm trước ngày 10-08-2022 để nhận 200 xu và giúp người dùng khác hiểu hơn về sản phẩm nhé!",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: true,
     },
     {
       id: 10,
@@ -93,13 +106,16 @@ export const NoticeCartUpdate = () => {
         "Đơn hàng 10 đã hoàn thành. Bạn hãy đánh giá sản phẩm trước ngày 10-08-2022 để nhận 200 xu và giúp người dùng khác hiểu hơn về sản phẩm nhé!",
       createdDate: "09:50 05-08-2022",
       image: home,
+      isRead: false,
     },
   ]);
   return (
     <View style={styles.container}>
       <View style={styles.bodyWrapper}>
         <FlatList
-          ListHeaderComponent={NoticeCartListHeader}
+          ListHeaderComponent={
+            <NoticeCartListHeader title={title} badge={badge} />
+          }
           data={cartUpdate}
           numColumns={1}
           keyExtractor={(item) => `${item.id}`}
@@ -117,6 +133,7 @@ const styles = StyleSheet.create({
   headerWrapper: {
     flexDirection: "row",
     paddingHorizontal: 5,
+    paddingVertical: 10,
   },
   headerFirstTextWrapper: {
     flex: 1,
@@ -125,6 +142,7 @@ const styles = StyleSheet.create({
   },
   headerFirstText: {
     color: "grey",
+    fontWeight: "bold",
   },
   headerSecondTextWrapper: {
     flex: 1,

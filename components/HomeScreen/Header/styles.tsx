@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   searchBar: {
     flexDirection: "row",
-    flex: 4 / 5,
+    flexShrink: 9,
     backgroundColor: "white",
     borderRadius: 2,
     paddingVertical: 5,
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
   },
   topRightActionContainer: {
     flexDirection: "row",
-    flex: 1 / 5,
+    flexShrink: 1,
     alignItems: "center",
     justifyContent: "flex-end",
   },
