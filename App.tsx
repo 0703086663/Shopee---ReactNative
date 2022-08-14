@@ -5,8 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { HomeScreen } from "./screens/HomeScreen";
-import { CategoryScreen } from "./screens/CategoryScreen";
-import { DetailScreen } from "./screens/DetailScreen";
+import { LiveScreen } from "./screens/LiveScreen";
 import { UserScreen } from "./screens/UserScreen";
 import { NotificationScreen } from "./screens/NotificationScreen";
 import { CartScreen } from "./screens/CartScreen";
@@ -36,30 +35,10 @@ const NotificationStackNavigator = () => {
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Category" component={CategoryScreen} />
-        <Stack.Screen name="Detail" component={DetailScreen} />
-      </Stack.Navigator> */}
-
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
-
-            // if (route.name === "Home") {
-            //   iconName = focused ? "ios-thumbs-up" : "ios-thumbs-up-outline";
-            // } else if (route.name === "Feed") {
-            //   iconName = focused ? "square" : "square-outline";
-            // } else if (route.name === "Live") {
-            //   iconName = focused ? "camera" : "camera-outline";
-            // } else if (route.name === "Notification") {
-            //   iconName = focused
-            //     ? "ios-notifications"
-            //     : "ios-notifications-outline";
-            // } else if (route.name === "User") {
-            //   iconName = focused ? "person" : "person-outline";
-            // }
             if (route.name === "Home") {
               if ((iconName = focused)) {
                 return <Ionicons name={"ios-home"} size={size} color={color} />;
@@ -117,16 +96,24 @@ const App = () => {
           options={{ title: "Home", headerShown: false }}
         />
         <Tab.Screen
-          name="User"
-          component={UserScreen}
-          options={{ title: "Tôi", headerShown: false }}
+          name="Live"
+          component={LiveScreen}
+          options={{ headerShown: false }}
         />
-        <Tab.Screen name="Feed" component={DetailScreen} />
-        <Tab.Screen name="Live" component={CategoryScreen} />
+        <Tab.Screen
+          name="Feed"
+          component={LiveScreen}
+          options={{ headerShown: false }}
+        />
         <Tab.Screen
           name="Notification"
           component={NotificationStackNavigator}
           options={{ title: "Thông báo", headerShown: false }}
+        />
+        <Tab.Screen
+          name="User"
+          component={UserScreen}
+          options={{ title: "Tôi", headerShown: false }}
         />
       </Tab.Navigator>
     </NavigationContainer>

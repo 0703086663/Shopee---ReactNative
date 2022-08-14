@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, StyleSheet, Text, ScrollView, FlatList } from "react-native";
+import { View, StyleSheet, Text, FlatList } from "react-native";
 import home from "../assets/home.png";
 import { NoticeCartItem } from "./NoticeCartItem";
 

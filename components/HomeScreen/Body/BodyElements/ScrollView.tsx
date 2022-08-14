@@ -6,7 +6,6 @@ import {
   MaterialCommunityIcons,
   Foundation,
 } from "@expo/vector-icons";
-import test from "../../../../assets/code.jpg";
 
 export const ScrollViewElements = () => {
   return (

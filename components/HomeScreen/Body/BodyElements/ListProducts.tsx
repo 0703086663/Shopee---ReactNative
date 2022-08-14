@@ -6,6 +6,7 @@ import {
   Text,
   ScrollView,
   Image,
+  SafeAreaView,
 } from "react-native";
 import { useState } from "react";
 import { Product } from "./Product";

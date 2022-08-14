@@ -1,5 +1,11 @@
 import React from "react";
-import { StyleSheet, View, ScrollView, Image } from "react-native";
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  Image,
+  SafeAreaView,
+} from "react-native";
 import { ScrollViewElements } from "./BodyElements/ScrollView";
 import { ListProductsElement } from "./BodyElements/ListProducts";
 // import Carousel from "react-native-snap-carousel";
