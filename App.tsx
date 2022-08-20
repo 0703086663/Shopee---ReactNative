@@ -9,6 +9,7 @@ import { LiveScreen } from "./screens/LiveScreen";
 import { UserScreen } from "./screens/UserScreen";
 import { NotificationScreen } from "./screens/NotificationScreen";
 import { CartScreen } from "./screens/CartScreen";
+import { FeedScreen } from "./screens/FeedScreen";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 
@@ -102,7 +103,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Feed"
-          component={LiveScreen}
+          component={FeedScreen}
           options={{ headerShown: false }}
         />
         <Tab.Screen

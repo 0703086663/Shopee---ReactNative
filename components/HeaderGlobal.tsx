@@ -1,6 +1,6 @@
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { HeaderIcons } from "./HeaderIcons";
-import { AntDesign } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 export const ReturnIcon = (props: any) => {
@@ -13,7 +13,7 @@ export const ReturnIcon = (props: any) => {
           navigation.goBack();
         }}
       >
-        <AntDesign name="arrowleft" size={24} color="tomato" />
+        <Ionicons name={"ios-search-outline"} color={"tomato"} size={24} />
       </TouchableOpacity>
     );
   } else {
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   },
   topLeftHeader: {
     flex: 1 / 3,
+    paddingLeft: 10,
   },
   topLeftHeaderItems: {
     backgroundColor: "white",
