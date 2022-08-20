@@ -1,10 +1,16 @@
 import React from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import { ReadComment } from "../CRUD/ReadComment";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 export const Comment = (props: any) => {
   const { data } = props;
+
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.wrapperTop}>
@@ -15,7 +21,15 @@ export const Comment = (props: any) => {
         </Text>
       </View>
       <View style={styles.wrapperCenter}>
-        <Text style={styles.textGrey}>Xem toàn bộ 54 bình luận</Text>
+        <Text
+          style={styles.textGrey}
+          onPress={() => {
+            console.log(data);
+            navigation.navigate("ReadComment" as never, data as never);
+          }}
+        >
+          Xem toàn bộ 54 bình luận
+        </Text>
       </View>
       <View style={styles.wrapperBottom}>
         <View style={styles.wrapLeftBottom}>

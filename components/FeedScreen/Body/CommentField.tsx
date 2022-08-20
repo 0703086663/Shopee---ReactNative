@@ -4,8 +4,7 @@ import { View, Text, Image, StyleSheet, TextInput } from "react-native";
 import avatar from "../../../assets/avatar.png";
 import { FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
 
-export const CommentField = (props: any) => {
-  const { data } = props;
+export const CommentField = () => {
   return (
     <View style={styles.container}>
       <View style={styles.wrapperLeft}>
@@ -13,7 +12,6 @@ export const CommentField = (props: any) => {
         <TextInput placeholder={"Thêm Bình luận"} />
       </View>
       <View style={styles.wrapperRight}>
-        {/* <Text>CommentField</Text> */}
         <FontAwesome5
           name="grin-hearts"
           size={18}

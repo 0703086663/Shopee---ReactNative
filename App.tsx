@@ -11,6 +11,8 @@ import { NotificationScreen } from "./screens/NotificationScreen";
 import { CartScreen } from "./screens/CartScreen";
 import { FeedScreen } from "./screens/FeedScreen";
 
+import { ReadComment } from "./components/FeedScreen/CRUD/ReadComment";
+
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Stack = createNativeStackNavigator();
@@ -28,6 +30,30 @@ const NotificationStackNavigator = () => {
         name="CartStack"
         options={{ headerShown: false }}
         component={CartScreen}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const LiveStackNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: "tomato",
+        headerTitleStyle: {
+          fontWeight: "bold",
+        },
+      }}
+    >
+      <Stack.Screen
+        name="FeedStack"
+        options={{ headerShown: false }}
+        component={FeedScreen}
+      />
+      <Stack.Screen
+        name="ReadComment"
+        options={{ headerShown: true, title: "Bình luận" }}
+        component={ReadComment}
       />
     </Stack.Navigator>
   );
@@ -103,7 +129,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Feed"
-          component={FeedScreen}
+          component={LiveStackNavigator}
           options={{ headerShown: false }}
         />
         <Tab.Screen

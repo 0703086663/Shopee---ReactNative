@@ -1,19 +1,39 @@
-import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  Alert,
-} from "react-native";
+import React, { useState } from "react";
+import { View, Text, StyleSheet, Image, ActionSheetIOS } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import { Comment } from "./Comment";
 import { CommentField } from "./CommentField";
+import { Read } from "../CRUD/Read";
+
 import avatar from "../../../assets/avatar.png";
 
 export const RenderItem = (props: any) => {
+  const [result, setResult] = useState("🔮");
+
+  const ActionSheet = () =>
+    ActionSheetIOS.showActionSheetWithOptions(
+      {
+        options: ["Cancel", "Create", "Read", "Update", "Delete"],
+        destructiveButtonIndex: 4,
+        cancelButtonIndex: 0,
+        userInterfaceStyle: "dark",
+      },
+      (buttonIndex) => {
+        if (buttonIndex === 0) {
+          // cancel action
+        } else if (buttonIndex === 1) {
+          setResult("Create");
+        } else if (buttonIndex === 2) {
+          setResult("Read");
+        } else if (buttonIndex === 3) {
+          setResult("Update");
+        } else if (buttonIndex === 4) {
+          setResult("Delete");
+        }
+      }
+    );
+
   const { data } = props;
   return (
     <View style={styles.container}>
@@ -29,8 +49,15 @@ export const RenderItem = (props: any) => {
           <View style={styles.wrapRight}>
             <View style={styles.badgeFollower}>
               <Text style={styles.badgeText}>Theo Dõi</Text>
+
+              <Text>{result}</Text>
             </View>
-            <FontAwesome name="ellipsis-h" size={22} color="grey" />
+            <FontAwesome
+              name="ellipsis-h"
+              size={22}
+              color="grey"
+              onPress={ActionSheet}
+            />
           </View>
         </View>
         {/* <Text style={styles.id}>{data.id}</Text> */}
@@ -55,7 +82,7 @@ export const RenderItem = (props: any) => {
           </View>
         </View>
         <Comment data={data} />
-        <CommentField data={data} />
+        <CommentField />
       </View>
     </View>
   );
