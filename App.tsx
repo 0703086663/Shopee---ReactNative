@@ -27,7 +27,7 @@ const NotificationStackNavigator = () => {
         component={NotificationScreen}
       />
       <Stack.Screen
-        name="CartStack"
+        name="CartScreen"
         options={{ headerShown: false }}
         component={CartScreen}
       />

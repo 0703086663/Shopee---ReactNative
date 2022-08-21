@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 // import { NavigationContainer } from "@react-navigation/native";
@@ -10,16 +10,15 @@ import { FontAwesome5 } from "@expo/vector-icons";
 export const Comment = (props: any) => {
   const { data } = props;
 
-  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.wrapperTop}>
         <Text style={styles.title} numberOfLines={2}>
-          <Text style={styles.name}>NameOf{data.id}</Text>
+          <Text style={styles.name}>{data.userName}</Text>
           {"  "}
           {data.title}
         </Text>
-      </View>
+        {/* </View>
       <View style={styles.wrapperCenter}>
         <Text
           style={styles.textGrey}
@@ -29,21 +28,31 @@ export const Comment = (props: any) => {
           }}
         >
           Xem toàn bộ 54 bình luận
-        </Text>
+        </Text> */}
       </View>
       <View style={styles.wrapperBottom}>
         <View style={styles.wrapLeftBottom}>
-          <Text style={styles.title} numberOfLines={2}>
-            <Text style={styles.name}>NameOf{data.id}</Text>
-            {"  "}
-            {data.body}
-          </Text>
+          {data.body.map((item: any, key: any) => {
+            return (
+              <View key={key} style={{ flexDirection: 'row' }}>
+                <Text style={styles.name}> {item.userId}</Text>
+                {/* {" "} */}
+                <Text > {item.comment}</Text>
+
+              </View>
+
+            )
+          })}
+
+          {/* <Text style={styles.name}>NameOf{data.id}</Text> */}
+          {/* <Text style={styles.name}>NameOf{data.id}</Text>
+            {"  "}adsdad */}
         </View>
         <View style={styles.wrapRightBottom}>
           <FontAwesome5 name="heart" color={"grey"} size={16} />
         </View>
       </View>
-    </View>
+    </View >
   );
 };
 
@@ -61,7 +70,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 14,
     fontWeight: "bold",
-    marginRight: 25,
+    marginRight: 25
   },
   wrapperCenter: {
     paddingTop: 10,

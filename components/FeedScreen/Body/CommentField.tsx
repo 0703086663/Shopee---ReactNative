@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TextInput } from "react-native";
 
 import avatar from "../../../assets/avatar.png";
 import { FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
 
-export const CommentField = () => {
+export const CommentField = (data: any) => {
+
   return (
     <View style={styles.container}>
       <View style={styles.wrapperLeft}>
         <Image source={avatar} style={styles.avatar} />
-        <TextInput placeholder={"Thêm Bình luận"} />
+        <TextInput placeholder={"Thêm Bình luận"} onSubmitEditing={(event) => {
+
+
+          const newComment = {
+            userId: 1,
+            comment: event.nativeEvent.text
+          }
+          console.log('commentdasdadasdaasddassa', newComment)
+          data.data.body.push(newComment)
+          console.log('data', data.data.body)
+
+        }}
+        />
       </View>
       <View style={styles.wrapperRight}>
         <FontAwesome5

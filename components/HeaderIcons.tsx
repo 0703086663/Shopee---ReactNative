@@ -12,7 +12,7 @@ export const HeaderIcons = (props: any) => {
       <View>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("CartStack" as any);
+            navigation.navigate('CartScreen' as any);
           }}
         >
           <Badge value="6" status="error" containerStyle={styles.badgeIcon} />

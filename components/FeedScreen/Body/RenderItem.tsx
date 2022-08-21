@@ -3,8 +3,7 @@ import { View, Text, StyleSheet, Image, ActionSheetIOS } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import { Comment } from "./Comment";
-import { CommentField } from "./CommentField";
-import { Read } from "../CRUD/Read";
+import { CommentField } from "./CommentField"
 
 import avatar from "../../../assets/avatar.png";
 
@@ -44,7 +43,7 @@ export const RenderItem = (props: any) => {
             <View style={styles.badgeIcon}>
               <FontAwesome name="check" size={12} color="white" />
             </View>
-            <Text style={styles.wrapLeftName}>Tên {data.id}</Text>
+            <Text style={styles.wrapLeftName}>{data.userName}</Text>
           </View>
           <View style={styles.wrapRight}>
             <View style={styles.badgeFollower}>
@@ -82,7 +81,7 @@ export const RenderItem = (props: any) => {
           </View>
         </View>
         <Comment data={data} />
-        <CommentField />
+        <CommentField data={data} />
       </View>
     </View>
   );
